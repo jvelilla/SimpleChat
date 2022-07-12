@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiClient.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            >
+  
+        <Entry
+                x:Name="userName"
+                Placeholder="Type your name"
+                FontSize="16"
+                />
+
+        <Entry
+                x:Name="userChatMessage"
+                Placeholder="Type your message"
+                FontSize="16"
+                />
+
+        <Button
+                x:Name="sendButton"
+                Text="Send"
+                Clicked="OnSendMessageClicked"
+                />
+         <StackLayout>
+             <Label  x:Name="chatMessages" BackgroundColor="#2c3e50" TextColor="White" HeightRequest="350"  VerticalTextAlignment="Start"/>
+         </StackLayout>
+    
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
