@@ -4,31 +4,56 @@
              x:Class="MauiClient.MainPage">
 
     <ScrollView>
+        
         <VerticalStackLayout
             Spacing="25"
             Padding="30,0"
             >
-  
-        <Entry
+            <Grid ColumnDefinitions="Auto, 30, Auto">
+
+                <Button Grid.Column="0"
+                    x:Name="openConnection"
+                    Text="Enter ChatRoom"
+                    Padding="10, 10" Margin="10"  
+                    HorizontalOptions="Center"
+                    Clicked="OnOpenConnectionClicked"
+                    IsEnabled="True"
+                />
+                <Button Grid.Column="2"
+                    x:Name="closeConnection"
+                    Text="Exit ChatRoom"
+                    Padding="10, 10"  Margin="10"  
+                    HorizontalOptions="Center"
+                    Clicked="OnCloseConnectionClicked"
+                    IsEnabled="False"
+                />
+            </Grid>
+
+
+            <Entry
                 x:Name="userName"
                 Placeholder="Type your name"
                 FontSize="16"
                 />
 
-        <Entry
+            <Entry
                 x:Name="userChatMessage"
                 Placeholder="Type your message"
                 FontSize="16"
                 />
 
-        <Button
+            <Button
                 x:Name="sendButton"
                 Text="Send"
                 Clicked="OnSendMessageClicked"
+                IsEnabled="False"
                 />
-         <StackLayout>
-             <Label  x:Name="chatMessages" BackgroundColor="#2c3e50" TextColor="White" HeightRequest="350"  VerticalTextAlignment="Start"/>
-         </StackLayout>
+            
+            <ScrollView VerticalScrollBarVisibility="Always">
+                <StackLayout>
+                    <Label  x:Name="chatMessages" BackgroundColor="#2c3e50" TextColor="White" HeightRequest="350"  VerticalTextAlignment="Start"/>
+                </StackLayout>
+            </ScrollView>
     
 
         </VerticalStackLayout>

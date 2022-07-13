@@ -38,6 +38,7 @@
     {
         hubConnection = new HubConnectionBuilder()
             .WithUrl(NavigationManager.ToAbsoluteUri("/chat"))
+            .WithAutomaticReconnect()
             .Build();
 
         hubConnection.On<string, string>("MessageReceived", (user, message) =>

@@ -2,7 +2,6 @@
 //https://docs.microsoft.com/en-us/aspnet/core/blazor/tutorials/signalr-blazor?view=aspnetcore-6.0&tabs=visual-studio&pivots=server
 using Microsoft.AspNetCore.ResponseCompression;
 using BlazorServerSignalRApp.Server.Hubs;
-
 using BlazorServer.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -37,6 +36,7 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.MapBlazorHub();
+//Configure SignalR Endpoint.
 app.MapHub<ChatHub>("/chat");
 app.MapFallbackToPage("/_Host");
 

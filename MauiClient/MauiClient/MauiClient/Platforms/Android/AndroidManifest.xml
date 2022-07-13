@@ -7,5 +7,5 @@
 
 <!--!
 Using android:usesCleartextTraffic="true" to avoid the exception
-System.Net.WebException: 'Cleartext HTTP traffic to 192.168.100.6 not permitted' when we use a local environment.
+System.Net.WebException: 'Cleartext HTTP traffic to localhost not permitted' when we use a local environment.
 -->
